@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "koan"
   gem.homepage = "http://github.com/buffpojken/koan"
   gem.license = "MIT"
-  gem.summary = %Q{}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Rails-dependent gem for Zendesk integration}
+  gem.description = %Q{Rails-dependent gem for Zendesk integration}
   gem.email = "daniel@sykewarrior.com"
   gem.authors = ["buffpojken"]
   # dependencies defined in Gemfile

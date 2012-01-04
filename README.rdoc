@@ -1,6 +1,7 @@
 = koan
 
-Description goes here.
+Move along, there's nothing to see here.
+
 
 == Contributing to koan
  
