@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "koan"
   gem.homepage = "http://github.com/buffpojken/koan"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
+  gem.summary = %Q{}
   gem.description = %Q{TODO: longer description of your gem}
   gem.email = "daniel@sykewarrior.com"
   gem.authors = ["buffpojken"]
