@@ -1,16 +1,26 @@
 require 'koan'
-require 'rails'
-require 'action_controller'
+require 'rails' 
+
 
 module Koan
-  class Engine < Rails::Engine
-    config.mount_at = 'koan/'
 
-    initializer "static assets" do |app|
+  module Helper
+    def koan_script
+      javascript_include_tag('koan/koan.js')
+    end
+    def koan_styles
+      stylesheet_link_tag('koan/koan.css')
+    end
+  end
+  
+  class Engine < Rails::Engine
+    
+    config.mount_at = 'koan/'
+    initializer "koan.assets" do |app|
       app.middleware.use ::ActionDispatch::Static, "#{root}/public"
     end
     
-    initializer "config file" do |app|
+    initializer "koan.config" do |app|
       if(File.exists?(File.join(Rails.root, 'config', 'koan.yml')))
         config.creds = YAML::load(File.open(File.join(Rails.root, 'config', 'koan.yml'), 'r+'))[Rails.env]      
       else
@@ -18,5 +28,8 @@ module Koan
       end
     end
     
+    ActionView::Base.send :include, Koan::Helper
+    
   end
 end
+

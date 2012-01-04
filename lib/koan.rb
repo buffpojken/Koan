@@ -1,12 +1,8 @@
-require 'active_support/builder'
+require 'koan/engine'
 module Koan  
-  module Helper    
-    def koan_style_sheet
-      
-    end    
-  end
+  require 'active_support/builder'
   
-  class KoanPoster    
+  class Koan::Poster    
     
     def self.post(data)
       send_request(data)
