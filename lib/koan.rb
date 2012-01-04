@@ -6,7 +6,7 @@ module Koan
     end    
   end
   
-  class Poster    
+  class KoanPoster    
     
     def self.post(data)
       send_request(data)
@@ -16,9 +16,9 @@ module Koan
     
     def self.send_request(data)
       request = RestClient::Request.new({
-        :user       => Koan::Engine.config.credentials['username'], 
-        :password   => Koan::Engine.config.credentials['password'], 
-        :url        => format_address(Koan::Engine.config.credentials['domain']), 
+        :user       => Koan::Engine.config.creds['username'], 
+        :password   => Koan::Engine.config.creds['password'], 
+        :url        => format_address(Koan::Engine.config.creds['domain']), 
         :payload    => format_ticket(data), 
         :method     => :post, 
         :headers    => {'Accept' => '*/*', 'Content-Type' => 'application/xml'}

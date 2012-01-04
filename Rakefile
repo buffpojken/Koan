@@ -21,6 +21,8 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Rails-dependent gem for Zendesk integration}
   gem.email = "daniel@sykewarrior.com"
   gem.authors = ["buffpojken"]
+  gem.files = Dir["{lib}/**/*", "{app}/**/*", "{public}/**/*", "{config}/**/*"]
+  
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

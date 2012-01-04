@@ -12,7 +12,7 @@ module Koan
     
     initializer "config file" do |app|
       if(File.exists?(File.join(Rails.root, 'config', 'koan.yml')))
-        config.credentials = YAML::load(File.open(File.join(Rails.root, 'config', 'koan.yml'), 'r+'))[Rails.env]      
+        config.creds = YAML::load(File.open(File.join(Rails.root, 'config', 'koan.yml'), 'r+'))[Rails.env]      
       else
         raise NotImplementedError.new("Koan tried to load config/koan.yml but couldn't find the file?")
       end
