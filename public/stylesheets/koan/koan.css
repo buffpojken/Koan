@@ -1,0 +1,22 @@
+#koan-btn{background-image:url('/images/koan/tab.png');width:70px;height:118px;position:fixed;left:-20px;top:45%;cursor:pointer}
+#koan-popin-body{width:400px}
+.koan-field, .koan-area{background: #f6f6f6; width:390px;height:33px;padding:5px 5px;clear:both;margin:25px 0px 30px 0px;
+	-webkit-box-shadow: 1px 1px 6px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 6px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 6px rgba(50, 50, 50, 0.75);
+background: -moz-linear-gradient(top, #f6f6f6 0%, #f4f4f4 44%, #e6e6e6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(44%,#f4f4f4), color-stop(100%,#e6e6e6));
+background: -webkit-linear-gradient(top, #f6f6f6 0%,#f4f4f4 44%,#e6e6e6 100%);
+background: -o-linear-gradient(top, #f6f6f6 0%,#f4f4f4 44%,#e6e6e6 100%);
+background: -ms-linear-gradient(top, #f6f6f6 0%,#f4f4f4 44%,#e6e6e6 100%);
+background: linear-gradient(top, #f6f6f6 0%,#f4f4f4 44%,#e6e6e6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#e6e6e6',GradientType=0 );}
+.koan-area{height:160px}
+.koan-field label{float:left;padding:9px 0px 0px 0px;text-shadow:#fff 0px 1px 0;width:18%;text-align:center}
+.koan-field input{width:80%;float:right;background-color:transparent;outline:none;height:29px;-webkit-appearance: none;outline:none;border:none}
+.koan-field.active, .koan-area.active{background-color:#fff;-moz-box-shadow:inset 0 0 4px #AAA,0 0 8px rgba(0,151,220,0.4);-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.35),0 0 8px rgba(0,151,220,0.4);box-shadow:inset 0 0 4px #AAA,0 0 8px rgba(0,151,220,0.4);background-image:none;}
+.koan-area label{float:left;padding:10px 0px 0px 13px;text-shadow:#fff 0px 1px 0;width:97%;text-align:left}
+.koan-area textarea{width:97%;height:115px;margin:3px 0px 0px 0px;background-color:transparent;border:none;-webkit-appearance: none;resize:none;padding:5px;}
+.koan-button-row{position:relative;left:50%;float:left;clear:left;}
+.koan-button-row .inner{position:relative;left:-50%;text-align:left;}
+.koan-button-row button{margin:0px auto;}
