@@ -1,5 +1,5 @@
 module Koan
-  class KoanController < ActionController::Base
+  class KoanController < ApplicationController
 
     before_filter :current_user, :only => [:create]
     
@@ -13,8 +13,8 @@ module Koan
     
     def create
       params[:feedback].merge("requester-email" => @current_user.email) if @current_user
-      if Koan::Poster.post(params[:feedback])
-        render :text => {:error => false, :message => "We'll get back to you shortly!"}.to_json, :status => 200 and return
+      if Koan::Poster.post(params[:feedback].merge(:problem => true))
+        render :text => {:error => false, :message => "We'll get back to you shortly!<br />This window will close automatically."}.to_json, :status => 200 and return
       else
         render :text => {:error => true, :message => "Something must have gone wrong, try again!"}.to_json, :status => 500 and return
       end

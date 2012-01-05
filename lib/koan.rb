@@ -41,7 +41,7 @@ module Koan
        builder.description data[:description]
        builder.tag! 'status-id', 0
        builder.tag! 'ticket-type-id', data[:problem] ? 3 : 1
-       builder.tag! 'requester-email', data[:email]
+       builder.tag! 'requester-email', data['requester-email']
      end
    end
     

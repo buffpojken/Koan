@@ -1,5 +1,31 @@
+<!-- This div might look unnecessary, but since this is loaded by the ajax-popin framework, it's not .daniel -->
 <div>
-<div class="popin-content">
-		<h1>Fisk!</h1>	
-</div>
+	<div class="popin-content">
+		<div class="popin-header">
+			<div class="popin-header-content">
+				<h1>Do you have feedback or comments?</h1>
+				<a class="close unobtrusive" func="closePopin" href="#"></a>
+			</div>
+		</div>
+		<div class="popin-body" id="koan-popin-body">
+				<p>We want to make the best product possible for you. This is your 
+					opportunity to shape this awesome tool to your needs.
+				</p>
+				<div class="koan-field">
+					<label>E-Mail:</label>
+					<input type="text" name="feedback[requester-email]" id="koan-requester-email" />
+					<br class="clr"/>					
+				</div>
+				<div class="koan-area">
+					<label>Feedback:</label>
+					<textarea name="feedback[description]" id="koan-description-field"></textarea>
+					<br class="clr"/>
+				</div>
+				<div class="koan-button-row">
+					<div class="inner">
+						<%= button_tag 'Send Feedback', :id => 'feedback-button', :class => 'unobtrusive', :type => 'button', :func => 'post_koan' %>
+					</div>
+				</div>
+		</div>
+	</div>
 </div>
